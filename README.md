@@ -1,1 +1,1 @@
-# BattleRoyale
+# card-battle-royale
