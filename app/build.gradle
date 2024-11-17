@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs '/Users/ceciliabaik/1dv610/l1/lib/build/libs'
+    }
+}
+
+dependencies {
+    implementation name: 'prngtoolkit'
+}
+
+application {
+    mainClass.set('cardbattleroyale.CardBattleRoyaleApp')
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(16)
+        }
+    }
+}
