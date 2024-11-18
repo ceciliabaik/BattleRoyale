@@ -13,16 +13,13 @@ public class Dice {
     this.generator = factory.createDiceRollGenerator(random);
   }
 
-  public Dice(GeneratorFactory factory, Random random, int numOfSides) {
-    this.generator = factory.createDiceRollGeneratorWithCustomSides(random, numOfSides);
-  }
-
   public int getValue() {
     return value;
   }
 
   public int rollSingleDie() {
-    return generator.rollDie();
+    value = generator.rollDie();
+    return value;
   }
 
   public int[] rollMultipleDice(int numOfDice) {
