@@ -2,10 +2,10 @@ package cardbattleroyale.model.rules;
 
 import cardbattleroyale.model.Hand;
 
-public class BasicBattleStrategy implements BattleStrategy {
+public class DefaultBattleStrategy implements BattleStrategy {
 
   @Override
-  public boolean playCard(Hand playerHand, Hand computerHand) {
-    return !computerHand.isEmpty();
+  public boolean playCard(Hand playerHand, Hand opponentHand) {
+    return !opponentHand.isEmpty();
   }
 }

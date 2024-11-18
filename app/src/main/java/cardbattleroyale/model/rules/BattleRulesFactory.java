@@ -3,7 +3,7 @@ package cardbattleroyale.model.rules;
 public class BattleRulesFactory {
 
   public DefaultBattleStrategy getDefaultBattleRule() {
-    return new BasicBattleStrategy();
+    return new DefaultBattleStrategy();
   }
 
   public DefendBattleStrategy getDefendBattleRule() {
