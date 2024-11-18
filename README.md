@@ -1,1 +1,1 @@
-# card-battle-royale
+# poker-royale
