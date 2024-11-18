@@ -1,20 +1,29 @@
-package cardbattleroyale.model;
+package pokerroyale.model;
+
+import pokerroyale.model.enums.Rank;
+import pokerroyale.model.enums.Suit;
 
 public class Card {
   private final Suit suit;
   private final Rank rank;
+  private boolean isFaceUp;
 
   public Card(Suit suit, Rank rank) {
     this.suit = suit;
     this.rank = rank;
+    this.isFaceUp = false;
   }
 
   public Suit getSuit() {
-    return suit;
+    return isFaceUp ? suit : Suit.HIDDEN;
   }
 
   public Rank getRank() {
-    return rank;
+    return isFaceUp ? rank : Rank.HIDDEN;
+  }
+
+  public boolean isFaceUp() {
+    return this.isFaceUp;
   }
 
   public int getValue() {
@@ -36,7 +45,16 @@ public class Card {
     return rank.ordinal() + 2;
   }
 
+  public void reveal() {
+    this.isFaceUp = true;
+  }
+
+  public void flip() {
+    this.isFaceUp = !this.isFaceUp;
+  }
+
+  @Override
   public String toString() {
-    return rank + " of " + suit;
+    return isFaceUp ? rank + " of " + suit : "Hidden";
   }
 }

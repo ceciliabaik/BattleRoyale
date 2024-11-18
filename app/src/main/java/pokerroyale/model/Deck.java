@@ -1,4 +1,4 @@
-package cardbattleroyale.model;
+package pokerroyale.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,16 @@ import java.util.Random;
 import prngtoolkit.factories.GeneratorFactory;
 import prngtoolkit.generators.DeckShuffleGenerator;
 
-public class Deck {
-  private DeckShuffleGenerator<Card> generator;
-  private List<Card> cards;
+import pokerroyale.model.enums.Suit;
+import pokerroyale.model.enums.Rank;
 
-  public Deck(GeneratorFactory factory, Random random) {
+public class Deck {
+  private List<Card> cards;
+  private DeckShuffleGenerator<Card> generator;
+  Random random;
+  GeneratorFactory factory;
+
+  public Deck() {
     this.cards = new ArrayList<>();
     initializeDeck();
     this.generator = factory.createDeckShuffleGenerator(random, cards);
@@ -29,7 +34,7 @@ public class Deck {
     cards.add(new Card(suit, rank));
   }
 
-  public void shuffleDeck() {
+  public void shuffle() {
     generator.shuffleDeck();
   }
 
@@ -50,5 +55,9 @@ public class Deck {
 
   public void resetDeck() {
     generator.resetDeck();
+  }
+
+  public boolean isEmpty() {
+    return cards.isEmpty();  
   }
 }

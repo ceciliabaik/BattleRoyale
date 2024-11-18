@@ -1,2 +1,2 @@
-rootProject.name = 'card-battle-royale'
+rootProject.name = 'poker-royale'
 include('app', 'l1')

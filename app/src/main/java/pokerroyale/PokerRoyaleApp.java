@@ -1,10 +1,10 @@
-package cardbattleroyale;
+package pokerroyale;
 
-import cardbattleroyale.controller.GameController;
-import cardbattleroyale.model.Game;
-import cardbattleroyale.view.ConsoleView;
+import pokerroyale.controller.GameController;
+import pokerroyale.model.Game;
+import pokerroyale.view.ConsoleView;
 
-public class CardBattleRoyaleApp {
+public class PokerRoyaleApp {
   public static void main(String[] args) {
     try {
       Game game = new Game();

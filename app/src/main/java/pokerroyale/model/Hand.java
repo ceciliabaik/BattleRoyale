@@ -1,4 +1,4 @@
-package cardbattleroyale.model;
+package pokerroyale.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,16 @@ public class Hand {
     this.cards = new ArrayList<>();
   }
 
+  public List<Card> getCards() {
+    return cards;
+  }
+
   public int getHandValue() {
-    int totalValue = 0;
+    int sum = 0;
     for (Card card: cards) {
-      totalValue += card.getValue();
+      sum += card.getValue();
     }
-    return totalValue;
+    return sum;
   }
 
   public void addCard(Card card) {

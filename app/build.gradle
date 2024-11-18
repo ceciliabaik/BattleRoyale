@@ -15,7 +15,7 @@ dependencies {
 }
 
 application {
-    mainClass.set('cardbattleroyale.CardBattleRoyaleApp')
+    mainClass.set('pokerroyale.PokerRoyaleApp')
 }
 
 allprojects {
